@@ -1,44 +1,53 @@
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3360955884217763');
-    fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3360955884217763&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<button id="addToCartButton">Purchase</button>
-<script type="text/javascript">
-  $('#addToCartButton').click(function() {
-    fbq('track', 'Purchase', {currency: "USD", value: 10.00});
-  });
-</script>
-<button id="addToCartButton">Detailed Purchase</button>
-<script type="text/javascript">
-  $('#addToCartButton').click(function() {
-    fbq('track', 'Purchase', {
-        test_event_code: TEST24090,
-        currency: "USD",
-        value: 10.00,
-        contents: [
-        {
-            id: '301',
-            quantity: 1
-        },
-        {
-            id: '401',
-            quantity: 2
-        }],
-        content_type: 'product',
-        customField: 'hahahaha'
-    });
-  });
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="facebook-domain-verification" content="cobpw0qdnrdoyl5pqgsdcmgdit59m2" />
+    </head>
+    
+    <body>
+        <button id="addToCartButton">Purchase</button>
+        <button id="addToCartButton">Detailed Purchase</button>
+    </body>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3360955884217763');
+        fbq('track', 'PageView');
+        
+        $('#addToCartButton').click(function() {
+            fbq('track', 'Purchase', {currency: "USD", value: 10.00});
+        });
+        
+        $('#addToCartButton').click(function() {
+            fbq('track', 'Purchase', {
+                test_event_code: TEST24090,
+                currency: "USD",
+                value: 10.00,
+                contents: [
+                {
+                    id: '301',
+                    quantity: 1
+                },
+                {
+                    id: '401',
+                    quantity: 2
+                }],
+                content_type: 'product',
+                customField: 'hahahaha'
+            });
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3360955884217763&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+</html>
