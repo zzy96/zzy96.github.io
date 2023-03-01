@@ -23,12 +23,11 @@
         fbq('track', 'PageView');
         fbq('track', 'Purchase', {currency: "USD", value: 1.00});
         
-        document.getElementById('purchase').click(function() {
+        document.getElementById('purchase').onClick = function() {
             console.log('purchase button clicked');
             fbq('track', 'Purchase', {currency: "USD", value: 10.00});
-        });
-        
-        document.getElementById('purchaseWithDetails').click(function() {
+        }
+        document.getElementById('purchaseWithDetails').onClick = function() {
             console.log('purchaseWithDetails button clicked');
             fbq('track', 'Purchase', {
                 currency: "USD",
@@ -45,7 +44,7 @@
                 content_type: 'product',
                 customField: 'hahahaha'
             });
-        });
+        }
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=3360955884217763&ev=PageView&noscript=1"
