@@ -22,18 +22,17 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '3360955884217763');
         fbq('track', 'PageView');
-        fbq('track', 'Purchase', {currency: "USD", value: 1.00});
         
         $(document).ready(function(){
             $("#purchase").click(function(){
                 console.log('purchase button clicked and pixel fired');
-                fbq('track', 'Purchase', {currency: "USD", value: 10.00});
+                fbq('track', 'Purchase', {currency: "USD", value: 1.00});
             });
             $("#purchaseWithDetails").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: "USD",
-                    value: 12.00,
+                    value: 10.00,
                     contents: [
                     {
                         id: '301',
