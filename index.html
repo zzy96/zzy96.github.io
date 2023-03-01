@@ -21,6 +21,7 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '3360955884217763');
         fbq('track', 'PageView');
+        fbq('track', 'Purchase', {currency: "USD", value: 1.00});
         
         $('#purchase').click(function() {
             fbq('track', 'Purchase', {currency: "USD", value: 10.00});
