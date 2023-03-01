@@ -5,8 +5,8 @@
     </head>
     
     <body>
-        <button id="addToCartButton">Purchase</button>
-        <button id="addToCartButton">Detailed Purchase</button>
+        <button id="purchase">Purchase</button>
+        <button id="purchaseWithDetails">Purchase With Details</button>
     </body>
     
     <!-- Meta Pixel Code -->
@@ -22,15 +22,14 @@
         fbq('init', '3360955884217763');
         fbq('track', 'PageView');
         
-        $('#addToCartButton').click(function() {
+        $('#purchase').click(function() {
             fbq('track', 'Purchase', {currency: "USD", value: 10.00});
         });
         
-        $('#addToCartButton').click(function() {
+        $('#purchaseWithDetails').click(function() {
             fbq('track', 'Purchase', {
-                test_event_code: TEST24090,
                 currency: "USD",
-                value: 10.00,
+                value: 12.00,
                 contents: [
                 {
                     id: '301',
