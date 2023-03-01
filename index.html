@@ -24,11 +24,11 @@
         fbq('track', 'Purchase', {currency: "USD", value: 1.00});
         
         document.getElementById('purchase').onClick = function() {
-            console.log('purchase button clicked');
+            alert('purchase button clicked and pixel fired');
             fbq('track', 'Purchase', {currency: "USD", value: 10.00});
         }
         document.getElementById('purchaseWithDetails').onClick = function() {
-            console.log('purchaseWithDetails button clicked');
+            alert('purchaseWithDetails button clicked and pixel fired');
             fbq('track', 'Purchase', {
                 currency: "USD",
                 value: 12.00,
