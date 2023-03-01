@@ -30,7 +30,7 @@
                 fbq('track', 'Purchase', {currency: "USD", value: 10.00});
             });
             $("#purchaseWithDetails").click(function(){
-                alert('purchaseWithDetails button clicked and pixel fired');
+                console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: "USD",
                     value: 12.00,
