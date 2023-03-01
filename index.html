@@ -24,10 +24,12 @@
         fbq('track', 'Purchase', {currency: "USD", value: 1.00});
         
         $('#purchase').click(function() {
+            console.log('purchase button clicked');
             fbq('track', 'Purchase', {currency: "USD", value: 10.00});
         });
         
         $('#purchaseWithDetails').click(function() {
+            console.log('purchaseWithDetails button clicked');
             fbq('track', 'Purchase', {
                 currency: "USD",
                 value: 12.00,
