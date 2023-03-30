@@ -26,24 +26,27 @@
         $(document).ready(function(){
             $("#purchase").click(function(){
                 console.log('purchase button clicked and pixel fired');
-                fbq('track', 'Purchase', {currency: "USD", value: 1.00});
+                fbq('track', 'Purchase', {currency: 'USD', value: '10000'});
             });
             $("#purchaseWithDetails").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
-                    currency: "USD",
-                    value: 10.00,
+                    currency: 'THB',
+                    value: '500',
                     contents: [
                     {
-                        id: '301',
-                        quantity: 1
+                        id: '100',
+                        quantity: 1,
+                        item_price: 100,
+                        seller_id: '123'
                     },
                     {
-                        id: '401',
-                        quantity: 2
+                        id: '101',
+                        quantity: 2,
+                        item_price: 200,
+                        seller_id: '321'
                     }],
-                    content_type: 'product',
-                    customField: 'hahahaha'
+                    content_type: 'product'
                 });
             });
         });
