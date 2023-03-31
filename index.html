@@ -6,8 +6,9 @@
     </head>
     
     <body>
-        <button id="purchase">Purchase</button>
-        <button id="purchaseWithDetails">Purchase With Details</button>
+        <button id="purchase1">Purchase No Attribution</button>
+        <button id="purchase2">Purchase With Seller 123</button>
+        <button id="purchase3">Purchase With Seller 666</button>
     </body>
     
     <!-- Meta Pixel Code -->
@@ -24,11 +25,11 @@
         fbq('track', 'PageView');
         
         $(document).ready(function(){
-            $("#purchase").click(function(){
+            $("#purchase1").click(function(){
                 console.log('purchase button clicked and pixel fired');
                 fbq('track', 'Purchase', {currency: 'USD', value: '10000'});
             });
-            $("#purchaseWithDetails").click(function(){
+            $("#purchase2").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
@@ -44,6 +45,27 @@
                         id: '101',
                         quantity: 2,
                         item_price: 200,
+                        seller_id: '321'
+                    }],
+                    content_type: 'product'
+                });
+            });
+            $("#purchase3").click(function(){
+                console.log('purchaseWithDetails button clicked and pixel fired');
+                fbq('track', 'Purchase', {
+                    currency: 'THB',
+                    value: '500',
+                    contents: [
+                    {
+                        id: '103',
+                        quantity: 1,
+                        item_price: 200,
+                        seller_id: '666'
+                    },
+                    {
+                        id: '104',
+                        quantity: 2,
+                        item_price: 100,
                         seller_id: '321'
                     }],
                     content_type: 'product'
