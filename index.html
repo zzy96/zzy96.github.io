@@ -28,6 +28,7 @@
             $("#purchase1").click(function(){
                 console.log('purchase button clicked and pixel fired');
                 fbq('track', 'Purchase', {currency: 'USD', value: '10000'});
+                alert('Event fired!');
             });
             $("#purchase2").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
@@ -49,6 +50,7 @@
                     }],
                     content_type: 'product'
                 });
+                alert('Event fired with seller_id 123!');
             });
             $("#purchase3").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
@@ -70,6 +72,7 @@
                     }],
                     content_type: 'product'
                 });
+                alert('Event fired with seller_id 666!');
             });
         });
     </script>
