@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="facebook-domain-verification" content="cobpw0qdnrdoyl5pqgsdcmgdit59m2" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <button id="purchase1">Purchase Pixel 3693 Attribution</button>
+    </body>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '600432808123693');
+        fbq('track', 'PageView');
+        
+        $(document).ready(function(){
+            $("#purchase1").click(function(){
+                console.log('purchase button clicked and pixel fired');
+                fbq('track', 'Purchase', {currency: 'SGD', value: '100'});
+                alert('Event fired!');
+            });
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3360955884217763&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+</html>
