@@ -44,12 +44,12 @@
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
-                    value: (document.getElementById('purchaseAmount2').value + 400).toString(),
+                    value: (Number(document.getElementById('purchaseAmount2').value) + 400).toString(),
                     contents: [
                     {
                         id: '100',
                         quantity: 1,
-                        item_price: document.getElementById('purchaseAmount2').value,
+                        item_price: Number(document.getElementById('purchaseAmount2').value),
                         seller_id: '123'
                     },
                     {
@@ -66,12 +66,12 @@
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
-                    value: (document.getElementById('purchaseAmount3').value + 200).toString(),
+                    value: (Number(document.getElementById('purchaseAmount3').value) + 200).toString(),
                     contents: [
                     {
                         id: '103',
                         quantity: 1,
-                        item_price: document.getElementById('purchaseAmount3').value,
+                        item_price: Number(document.getElementById('purchaseAmount3').value),
                         seller_id: '666'
                     },
                     {
