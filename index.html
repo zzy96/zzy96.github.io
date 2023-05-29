@@ -4,20 +4,23 @@
         <meta name="facebook-domain-verification" content="cobpw0qdnrdoyl5pqgsdcmgdit59m2" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
-    
+
     <body>
         <h1>Shopping Cart 1</h1>
-        <p>No attribution & item. USD10000</p>
+        <p>No attribution (USD)</p>
+        <input type="text" id="purchaseAmount1" placeholder="amount" value="100">
         <button id="purchase1">Purchase</button>
         <h1>Shopping Cart 2</h1>
-        <p>THB500. Item 1: 123 (linked zhiyao personal ad account) THB100 * 1. Item 2: THB200 * 2</p>
+        <p>THB500. Item 1: 123 (linked zhiyao personal ad account) THB(from input value) * 1. Item 2: THB200 * 2</p>
         <p>(Press this if you saw ads from ZZY Test Page)</p>
+        <input type="text" id="purchaseAmount2" placeholder="amount" value="100">
         <button id="purchase2">Purchase</button>
         <h1>Shopping Cart 3</h1>
-        <p>THB500. Item 1: 666 (linked BMO Dogfooding business account) THB100 * 1. Item 2: THB200 * 2</p>
+        <p>THB500. Item 1: 666 (linked BMO Dogfooding business account) THB(from input value) * 1. Item 2: THB100 * 2</p>
+        <input type="text" id="purchaseAmount3" placeholder="amount" value="100">
         <button id="purchase3">Purchase</button>
     </body>
-    
+
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -30,23 +33,23 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '3360955884217763');
         fbq('track', 'PageView');
-        
+
         $(document).ready(function(){
             $("#purchase1").click(function(){
                 console.log('purchase button clicked and pixel fired');
-                fbq('track', 'Purchase', {currency: 'USD', value: '10000'});
+                fbq('track', 'Purchase', {currency: 'USD', value: document.getElementById('purchaseAmount1').value.toString()});
                 alert('Event fired!');
             });
             $("#purchase2").click(function(){
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
-                    value: '500',
+                    value: (document.getElementById('purchaseAmount2').value + 400).toString(),
                     contents: [
                     {
                         id: '100',
                         quantity: 1,
-                        item_price: 100,
+                        item_price: document.getElementById('purchaseAmount2').value,
                         seller_id: '123'
                     },
                     {
@@ -63,12 +66,12 @@
                 console.log('purchaseWithDetails button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
-                    value: '500',
+                    value: (document.getElementById('purchaseAmount3').value + 200).toString(),
                     contents: [
                     {
                         id: '103',
                         quantity: 1,
-                        item_price: 200,
+                        item_price: document.getElementById('purchaseAmount3').value,
                         seller_id: '666'
                     },
                     {
