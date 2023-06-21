@@ -3,21 +3,54 @@
     <head>
         <meta name="facebook-domain-verification" content="cobpw0qdnrdoyl5pqgsdcmgdit59m2" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <style>
+            .button {
+              background-color: #4CAF50; /* Green */
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+            .button1 {
+              background-color: white; 
+              color: black; 
+              border: 2px solid #4CAF50;
+            }
+            .button1:hover {
+              background-color: #4CAF50;
+              color: white;
+            }
+            .button2 {
+              background-color: white;
+              color: black;
+              border: 2px solid #555555;
+            }
+            .button2:hover {
+              background-color: #555555;
+              color: white;
+            }
+        </style>
     </head>
 
     <body>
         <h1>Section 1</h1>
         <p>No attribution (USD)</p>
         <input type="text" id="purchaseAmount1" placeholder="amount" value="100">
-        <button id="purchase1" disabled>Lucky Draw</button>
+        <button id="purchase1" class="button button2" disabled>Lucky Draw</button>
         <h1>Section 2</h1>
         <p>Item 1: 123 (link to personal ad account) THB(from input value) * 1. Item 2: THB200 * 2</p>
         <input type="text" id="purchaseAmount2" placeholder="amount" value="100">
-        <button id="purchase2" style="background-color: #4CAF50">Lucky Draw</button>
+        <button id="purchase2" class="button button1">Lucky Draw</button>
         <h1>Section 3</h1>
         <p>Item 1: 666 (link to BMO Dogfooding business account) THB(from input value) * 1. Item 2: THB100 * 2</p>
         <input type="text" id="purchaseAmount3" placeholder="amount" value="100">
-        <button id="purchase3" disabled>Lucky Draw</button>
+        <button id="purchase3" class="button button2" disabled>Lucky Draw</button>
     </body>
 
     <!-- Meta Pixel Code -->
