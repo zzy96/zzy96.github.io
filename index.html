@@ -68,12 +68,12 @@
 
         $(document).ready(function(){
             $("#purchase1").click(function(){
-                console.log('purchase button clicked and pixel fired');
+                console.log('purchase1 button clicked and pixel fired');
                 fbq('track', 'Purchase', {currency: 'USD', value: document.getElementById('purchaseAmount1').value.toString()});
                 alert('Event fired!');
             });
             $("#purchase2").click(function(){
-                console.log('purchaseWithDetails button clicked and pixel fired');
+                console.log('purchase2 button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
                     value: (Number(document.getElementById('purchaseAmount2').value) + 400).toString(),
@@ -95,7 +95,7 @@
                 alert('Event fired with seller_id 123!');
             });
             $("#purchase3").click(function(){
-                console.log('purchaseWithDetails button clicked and pixel fired');
+                console.log('purchase3 button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
                     value: (Number(document.getElementById('purchaseAmount3').value) + 200).toString(),
