@@ -39,18 +39,18 @@
     </head>
 
     <body>
-        <h1>Section 1</h1>
+<!--         <h1>Section 1</h1>
         <p>No attribution (USD)</p>
         <input type="text" id="purchaseAmount1" placeholder="amount" value="100">
         <button id="purchase1" class="button button2" disabled>Lucky Draw</button>
         <h1>Section 2</h1>
-        <p>Item 1: 123 (link to personal ad account) THB(from input value) * 1. Item 2: THB200 * 2</p>
+        <p>Item 1: 123 (link to personal ad account) THB(from input value) * 1. Item 2: THB200 * 2</p> -->
         <input type="text" id="purchaseAmount2" placeholder="amount" value="100">
         <button id="purchase2" class="button button1">Lucky Draw</button>
-        <h1>Section 3</h1>
+<!--         <h1>Section 3</h1>
         <p>Item 1: 666 (link to BMO Dogfooding business account) THB(from input value) * 1. Item 2: THB100 * 2</p>
         <input type="text" id="purchaseAmount3" placeholder="amount" value="100">
-        <button id="purchase3" class="button button2" disabled>Lucky Draw</button>
+        <button id="purchase3" class="button button2" disabled>Lucky Draw</button> -->
     </body>
 
     <!-- Meta Pixel Code -->
@@ -67,11 +67,11 @@
         fbq('track', 'PageView');
 
         $(document).ready(function(){
-            $("#purchase1").click(function(){
-                console.log('purchase1 button clicked and pixel fired');
-                fbq('track', 'Purchase', {currency: 'USD', value: document.getElementById('purchaseAmount1').value.toString()});
-                alert('Event fired!');
-            });
+            // $("#purchase1").click(function(){
+            //     console.log('purchase1 button clicked and pixel fired');
+            //     fbq('track', 'Purchase', {currency: 'USD', value: document.getElementById('purchaseAmount1').value.toString()});
+            //     alert('Event fired!');
+            // });
             $("#purchase2").click(function(){
                 console.log('purchase2 button clicked and pixel fired');
                 fbq('track', 'Purchase', {
@@ -94,28 +94,28 @@
                 });
                 alert('Event fired with seller_id 123!');
             });
-            $("#purchase3").click(function(){
-                console.log('purchase3 button clicked and pixel fired');
-                fbq('track', 'Purchase', {
-                    currency: 'THB',
-                    value: (Number(document.getElementById('purchaseAmount3').value) + 200).toString(),
-                    contents: [
-                    {
-                        id: '103',
-                        quantity: 1,
-                        item_price: Number(document.getElementById('purchaseAmount3').value),
-                        seller_id: '666'
-                    },
-                    {
-                        id: '104',
-                        quantity: 2,
-                        item_price: 100,
-                        seller_id: '321'
-                    }],
-                    content_type: 'product'
-                });
-                alert('Event fired with seller_id 666!');
-            });
+            // $("#purchase3").click(function(){
+            //     console.log('purchase3 button clicked and pixel fired');
+            //     fbq('track', 'Purchase', {
+            //         currency: 'THB',
+            //         value: (Number(document.getElementById('purchaseAmount3').value) + 200).toString(),
+            //         contents: [
+            //         {
+            //             id: '103',
+            //             quantity: 1,
+            //             item_price: Number(document.getElementById('purchaseAmount3').value),
+            //             seller_id: '666'
+            //         },
+            //         {
+            //             id: '104',
+            //             quantity: 2,
+            //             item_price: 100,
+            //             seller_id: '321'
+            //         }],
+            //         content_type: 'product'
+            //     });
+            //     alert('Event fired with seller_id 666!');
+            // });
         });
     </script>
     <noscript><img height="1" width="1" style="display:none"
