@@ -41,15 +41,15 @@
     <body>
 <!--         <h1>Section 1</h1>
         <p>No attribution (USD)</p>
-        <input type="text" id="purchaseAmount1" placeholder="amount" value="100">
+        <input type="text" id="purchaseAmount1" placeholder="amount" value="10000">
         <button id="purchase1" class="button button2" disabled>Welcome!</button>
         <h1>Section 2</h1>
         <p>Item 1: 123 (link to personal ad account) THB(from input value) * 1. Item 2: THB200 * 2</p> -->
-        <input type="text" id="purchaseAmount2" placeholder="amount" value="100">
+        <input type="text" id="purchaseAmount2" placeholder="amount" value="10000">
         <button id="purchase2" class="button button1">Lucky Draw</button>
 <!--         <h1>Section 3</h1>
         <p>Item 1: 666 (link to BMO Dogfooding business account) THB(from input value) * 1. Item 2: THB100 * 2</p>
-        <input type="text" id="purchaseAmount3" placeholder="amount" value="100">
+        <input type="text" id="purchaseAmount3" placeholder="amount" value="10000">
         <button id="purchase3" class="button button2" disabled>Lucky Draw</button> -->
     </body>
 
@@ -76,7 +76,7 @@
                 console.log('purchase2 button clicked and pixel fired');
                 fbq('track', 'Purchase', {
                     currency: 'THB',
-                    value: (Number(document.getElementById('purchaseAmount2').value) + 400).toString(),
+                    value: (Number(document.getElementById('purchaseAmount2').value) + 2000).toString(),
                     contents: [
                     {
                         id: '100',
@@ -87,7 +87,7 @@
                     {
                         id: '101',
                         quantity: 2,
-                        item_price: 200,
+                        item_price: 1000,
                         seller_id: '321'
                     }],
                     content_type: 'product'
